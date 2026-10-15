@@ -18,3 +18,5 @@ __pycache__/
 # OS-bestanden
 .DS_Store
 Thumbs.db
+
+game_state.jsonl
