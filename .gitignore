@@ -1,0 +1,20 @@
+# Virtuele omgeving
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# uv
+.python-version
+
+# Omgevingsvariabelen
+.env
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS-bestanden
+.DS_Store
+Thumbs.db
