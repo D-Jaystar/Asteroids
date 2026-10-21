@@ -6,10 +6,14 @@ from player import Player
 
 def main() -> None:
     pygame.init()
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    Player.containers = (updatable, drawable)
     screen = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     dt :float = 0.0
     player: Player = Player(constants.SCREEN_WIDTH / 2, constants.SCREEN_HEIGHT / 2)
+
 
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
     print(f"Screen width: {constants.SCREEN_WIDTH}")
@@ -21,9 +25,10 @@ def main() -> None:
             if event.type == pygame.QUIT:
                 return
         screen.fill((0, 0, 0))
-        player.draw(screen)
-        player.update(dt)
+        for obj in drawable:
+            obj.draw(screen)
 
+        updatable.update(dt)
 
         pygame.display.flip()
 
