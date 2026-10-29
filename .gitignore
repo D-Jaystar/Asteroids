@@ -20,3 +20,4 @@ __pycache__/
 Thumbs.db
 
 game_state.jsonl
+game_events.jsonl
